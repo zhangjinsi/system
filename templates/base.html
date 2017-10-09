@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}默认标题{% endblock %}</title>
+
+    <link rel="stylesheet" href="/static/plugin/jedate/skin/jedate.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <script>
+
+        var isLogin = {{ isLogin | tojson }};
+        console.log(isLogin);
+    </script>
+
+
+
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    {% block contain %}
+
+    {% endblock %}
+
+
+
+    <script src="/static/plugin/echarts.min.js"></script>
+    <script src="/static/plugin/jquery/jquery-1.8.2.js"></script>
+    <script src="/static/plugin/jedate/jquery.jedate.js"></script>
+
+    {% block userjs %}
+
+    {% endblock %}
+
+</body>
+</html>
